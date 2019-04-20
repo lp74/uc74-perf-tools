@@ -1,5 +1,5 @@
 {
-  "name": "performance-analysis-tools",
+  "name": "uc74-perf-tools",
   "version": "1.0.0",
   "description": "Performance Analysis Environment",
   "main": "index.js",

@@ -10,7 +10,7 @@ describe('Person', () => {
     await page.tracing.start({path: './report/timeline-class.json'});
     await page.click('#person');
     await page._client.send('HeapProfiler.collectGarbage');
-    await page.waitFor(5000);
+    await page.waitFor(500);
     await page.tracing.stop();
   }, TIMEOUT);
 
@@ -19,7 +19,7 @@ describe('Person', () => {
     await page.tracing.start({path: './report/timeline-factory.json'});
     await page.click('#person-factory');
     await page._client.send('HeapProfiler.collectGarbage');
-    await page.waitFor(5000);
+    await page.waitFor(500);
     await page.tracing.stop();
   }, TIMEOUT);
 });
