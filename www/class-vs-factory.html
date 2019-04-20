@@ -11,32 +11,5 @@
     <button id="person">Class</button>
     <button id="person-factory">Factory</button>
 </body>
-
-<script type="module">
-    import { Person as PersonClass} from './lib/person.js';
-    import { Person as PersonFactory } from './lib/person-factory.js'
-    const N = 1e8;
-    const button = document.getElementById('person');
-    const listener = button.addEventListener('click', createPerson);
-    async function createPerson(e) {
-        e.preventDefault();
-        let p;
-        for (let i = 0; i < N; i++) {
-            p = new PersonClass('A', Math.random());
-        }
-        return p;
-    }
-
-    const button2 = document.getElementById('person-factory');
-    const listener2 = button2.addEventListener('click', createPersonFactory);
-    async function createPersonFactory(e) {
-        e.preventDefault();
-        let p;
-        for (let i = 0; i < N; i++) {
-            p = PersonFactory('A', Math.random());
-        }
-        return p;
-    }
-</script>
-
+<script type="module" src="lib/class-vs-factory.js"></script>
 </html>
